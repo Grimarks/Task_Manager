@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Task Manager</h1>
+    <button id="toggleTheme">Toggle Dark Mode</button>
+</header>
+<main>
+    <section class="task-form">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+            <select id="taskPriority" required>
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <input type="date" id="taskDueDate" required>
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <section class="task-list">
+        <h2>Tasks</h2>
+        <div id="filters">
+            <input type="text" id="searchTask" placeholder="Search tasks...">
+            <select id="filterPriority">
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <select id="filterStatus">
+                <option value="all">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+        <ul id="taskContainer"></ul>
+    </section>
+</main>
+<script src="index.js"></script>
+</body>
+</html>
